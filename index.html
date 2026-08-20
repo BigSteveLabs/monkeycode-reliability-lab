@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BigSteve Labs — MonkeyCode Reliability Lab</title>
+  <meta name="description" content="Independent real-world testing and reliability research for MonkeyCode by BigSteve Labs." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f5b23d'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23241a05'>BS</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="data/test-results.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BS</span>
+        <span>BigSteve Labs <span class="brand-sub">/ Reliability Lab</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="dashboard.html">Test Dashboard</a>
+        <a href="method.html">Testing Method</a>
+        <a href="bugs.html">Reproducible Bugs</a>
+        <a href="findings.html">Positive Findings</a>
+        <a href="limitations.html">Known Limitations</a>
+        <a href="research.html">Research</a>
+        <a href="evidence.html">Evidence</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Independent reliability research</span>
+      <h1>How well does MonkeyCode really <span class="hl">hold up</span> in the field?</h1>
+      <p class="lede">
+        BigSteve Labs runs hands-on, real-world tests across the MonkeyCode ecosystem —
+        Web, MonkeyWork Desktop, and mobile — and publishes the results here.
+        Every claim is backed by a test record, an evidence trail, and a link back to GitHub.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="dashboard.html">View test results</a>
+        <a class="btn btn-ghost" href="method.html">How we test</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div data-sample-banner></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Coverage map</p>
+        <h2 class="section-title">What the lab covers</h2>
+        <p class="section-desc">
+          A reliability surface spanning the full MonkeyCode experience, from sign-in to
+          self-hosted deployment.
+        </p>
+      </div>
+      <ul class="feature-list">
+        <li><span class="feat">Authentication</span><span class="cov">OAuth sign-in, API keys, session persistence</span></li>
+        <li><span class="feat">Task Lifecycle</span><span class="cov">Create, queue, run, cancel, complete, retry</span></li>
+        <li><span class="feat">Browser Control</span><span class="cov">Navigation, DOM interaction, page-state reads</span></li>
+        <li><span class="feat">Skills</span><span class="cov">Registration, invocation, routing</span></li>
+        <li><span class="feat">MCP</span><span class="cov">Server connection, tool discovery, tool calls</span></li>
+        <li><span class="feat">Custom Models</span><span class="cov">Endpoint configuration, provider switching</span></li>
+        <li><span class="feat">Quotas</span><span class="cov">Consumption tracking, billing deltas</span></li>
+        <li><span class="feat">Git Integration</span><span class="cov">Repo connect, commit, push, PR creation</span></li>
+        <li><span class="feat">Self-Hosted Deployment</span><span class="cov">Private and on-prem installs</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Platforms</p>
+        <h2 class="section-title">Tested across the surface</h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="card card-link" href="dashboard.html">
+          <div class="card-icon">Web</div>
+          <h3>MonkeyCode Web</h3>
+          <p>The browser-based product surface. All scripted, task-lifecycle, and quota tests target this platform first.</p>
+        </a>
+        <a class="card card-link" href="dashboard.html">
+          <div class="card-icon">Work</div>
+          <h3>MonkeyWork Desktop</h3>
+          <p>The desktop client. Coverage currently blocked pending a real test device and signed build.</p>
+        </a>
+        <a class="card card-link" href="dashboard.html">
+          <div class="card-icon">Mob</div>
+          <h3>Mobile</h3>
+          <p>Responsive and mobile behavior. Coverage currently blocked pending a real mobile test device.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Lab sections</p>
+        <h2 class="section-title">Explore the lab</h2>
+      </div>
+      <div class="grid grid-2">
+        <a class="card card-link" href="dashboard.html">
+          <div class="card-icon">DB</div>
+          <h3>Test Dashboard</h3>
+          <p>Every test record with platform, feature, status, quota before/after, evidence, and linked issues. Filter by platform, feature, and result.</p>
+        </a>
+        <a class="card card-link" href="method.html">
+          <div class="card-icon">M</div>
+          <h3>Testing Method</h3>
+          <p>The protocol behind every run: scripted passes, real-world rehearsals, adversarial probes, cross-platform parity, and quota observation.</p>
+        </a>
+        <a class="card card-link" href="bugs.html">
+          <div class="card-icon">B</div>
+          <h3>Reproducible Bugs</h3>
+          <p>Issues we can reproduce on demand, each with repro steps and a link to the GitHub issue.</p>
+        </a>
+        <a class="card card-link" href="findings.html">
+          <div class="card-icon">+</div>
+          <h3>Positive Findings</h3>
+          <p>Behavior that exceeded expectations — documented so the good parts stay good.</p>
+        </a>
+        <a class="card card-link" href="limitations.html">
+          <div class="card-icon">L</div>
+          <h3>Known Limitations</h3>
+          <p>Where the lab itself is limited: missing devices, sample-only data, unprovisioned infrastructure.</p>
+        </a>
+        <a class="card card-link" href="research.html">
+          <div class="card-icon">R</div>
+          <h3>Research</h3>
+          <p>Future articles and deep dives planned from accumulated test evidence.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">How findings surface</p>
+        <h2 class="section-title">From observation to issue</h2>
+      </div>
+      <ol class="timeline">
+        <li><b>Observe</b> &rarr; run a test and log the outcome</li>
+        <li><b>Reproduce</b> &rarr; confirm it happens again</li>
+        <li><b>Triangulate</b> &rarr; narrow version, platform, and trigger</li>
+        <li><b>Document</b> &rarr; write up repro steps and evidence</li>
+        <li><b>Link</b> &rarr; attach the GitHub issue</li>
+        <li><b>Report</b> &rarr; surface the finding to MonkeyCode</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="labs">BigSteve Labs — MonkeyCode Reliability Lab</div>
+        <div class="tagline">Independent real-world testing and reliability research.</div>
+        <div class="tagline dim">All data is SAMPLE DATA until real test runs begin.</div>
+      </div>
+      <div class="links">
+        <a href="dashboard.html">Test Dashboard</a>
+        <a href="method.html">Testing Method</a>
+        <a href="bugs.html">Bugs</a>
+        <a href="evidence.html">Evidence</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

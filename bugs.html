@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reproducible Bugs — BigSteve Labs</title>
+  <meta name="description" content="Reproducible bugs found in MonkeyCode by BigSteve Labs." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f5b23d'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23241a05'>BS</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="data/bugs.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BS</span>
+        <span>BigSteve Labs <span class="brand-sub">/ Reliability Lab</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Test Dashboard</a>
+        <a href="method.html">Testing Method</a>
+        <a href="bugs.html" class="active">Reproducible Bugs</a>
+        <a href="findings.html">Positive Findings</a>
+        <a href="limitations.html">Known Limitations</a>
+        <a href="research.html">Research</a>
+        <a href="evidence.html">Evidence</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <span>Reproducible Bugs</span></div>
+      <h1>Reproducible bugs</h1>
+      <p>
+        Issues we can trigger on demand, with exact repro steps, severity, and the linked
+        GitHub issue. A bug only appears here once it has been reproduced more than once.
+      </p>
+      <div style="margin-top: 18px;"><div data-sample-banner></div></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 36px;">
+    <div class="container">
+      <div id="bug-list"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="labs">BigSteve Labs — MonkeyCode Reliability Lab</div>
+        <div class="tagline">Reproducible means reproduced, at least twice.</div>
+      </div>
+      <div class="links">
+        <a href="dashboard.html">Test Dashboard</a>
+        <a href="findings.html">Positive Findings</a>
+        <a href="evidence.html">Evidence</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bugs.js"></script>
+</body>
+</html>
