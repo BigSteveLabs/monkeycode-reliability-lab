@@ -45,9 +45,10 @@
         <span class="eyebrow"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Independent reliability research</span>
         <h1>How well does MonkeyCode really <span class="hl">hold up</span> in the <span class="hl2">field?</span></h1>
         <p class="lede">
-          BigSteve Labs runs hands-on, real-world tests across the MonkeyCode ecosystem —
-          Web, MonkeyWork Desktop, and mobile — and publishes the results here.
-          Every claim is backed by a test record, an evidence trail, and a link back to GitHub.
+          BigSteve Labs runs hands-on, real-world testing across the MonkeyCode ecosystem.
+          The lab's first verified result is live: an autonomous build on MonkeyCode Web
+          passed end-to-end, and every claim is backed by a test record, a quota snapshot,
+          and GitHub evidence.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="dashboard.html">View test results</a>
@@ -62,9 +63,31 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="padding-top: 40px; padding-bottom: 0;">
     <div class="container">
-      <div data-sample-banner></div>
+      <div class="callout-real">
+        <div style="display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items: flex-start;">
+          <div>
+            <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Verified real testing</p>
+            <h3 style="margin: 0 0 8px; font-size: 20px;">First verified result — PASS</h3>
+            <p style="margin: 0; color: var(--text-muted); max-width: 72ch;">
+              An autonomous build task completed on MonkeyCode Web with Git integration:
+              daily quota displayed 10.0M, tokens used 4.3M, remaining 5.6M. Prototype
+              built successfully, one practical verification pass completed, and
+              22 files pushed to GitHub at commit b34874b.
+            </p>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-real">VERIFIED</span>
+            <span class="badge badge-pass">PASS</span>
+          </div>
+        </div>
+        <a class="btn btn-primary btn-sm" style="margin-top: 16px;" href="dashboard.html">View on dashboard</a>
+      </div>
+      <p class="note-sm" style="margin-top: 14px;">
+        Demo/sample records are also kept in the data files for layout and testing purposes;
+        the dashboard hides them by default behind a "Show Sample Data" control.
+      </p>
     </div>
   </section>
 
@@ -212,7 +235,7 @@
       <div>
         <div class="labs"><img src="assets/images/pic%205.png" alt="BigSteve Labs logo" /> BigSteve Labs — MonkeyCode Reliability Lab</div>
         <div class="tagline">Independent real-world testing and reliability research.</div>
-        <div class="tagline dim">All data is SAMPLE DATA except where explicitly marked VERIFIED.</div>
+        <div class="tagline dim">Showing VERIFIED real testing; demo records available for layout and testing.</div>
       </div>
       <div class="links">
         <a href="dashboard.html">Test Dashboard</a>

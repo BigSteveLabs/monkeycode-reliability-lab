@@ -570,6 +570,28 @@ select:focus, input[type="search"]:focus { border-color: var(--blue); box-shadow
 .stack { display: flex; flex-direction: column; gap: 16px; }
 .mb { margin-bottom: 24px; }
 
+/* ============ Sample toggle ============ */
+.check-toggle {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 14px; font-weight: 600; color: var(--text-muted);
+  cursor: pointer; padding: 10px 12px;
+  background: var(--bg); border: 1px solid var(--border-strong); border-radius: 9px;
+  width: 100%;
+}
+.check-toggle:hover { color: var(--text); border-color: var(--blue); }
+.check-toggle input { accent-color: var(--blue); width: 16px; height: 16px; cursor: pointer; }
+
+.note-sm { font-size: 13px; color: var(--text-dim); }
+
+.callout-real {
+  background: linear-gradient(var(--bg-elev), var(--bg-elev)) padding-box,
+              linear-gradient(160deg, rgba(52, 211, 153, 0.5), rgba(59, 130, 246, 0.3)) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 0 30px rgba(52, 211, 153, 0.10);
+}
+
 /* ============ Responsive ============ */
 @media (max-width: 960px) {
   .hero-split { grid-template-columns: 1fr; gap: 34px; }

@@ -45,7 +45,7 @@
         and the related GitHub issue.
       </p>
       <div class="page-banner"><img src="assets/images/pic1.png" alt="MonkeyCode Reliability Lab banner" /></div>
-      <div style="margin-top: 18px;"><div data-sample-banner></div></div>
+      <p class="note-sm" style="margin-top: 14px;">Default view shows VERIFIED real testing only. Sample/demo records remain in the data files for layout and testing — enable "Show Sample Data" to include them.</p>
     </div>
   </section>
 
@@ -107,12 +107,19 @@
           <label for="f-search">Search</label>
           <input type="search" id="f-search" placeholder="Test ID, expected, actual..." />
         </div>
+        <div class="filter-group" style="justify-content: flex-end;">
+          <label>Sample data</label>
+          <label class="check-toggle" for="f-samples">
+            <input type="checkbox" id="f-samples" />
+            <span>Show Sample Data</span>
+          </label>
+        </div>
         <button class="filter-reset" id="f-reset" type="button">Reset filters</button>
       </div>
 
       <div class="results-meta">
         <span id="result-count">0 records</span>
-        <span class="dim">Data refreshed from <span class="mono">data/test-results.js</span></span>
+        <span class="dim" id="sample-note"></span>
       </div>
 
       <div class="record-list" id="record-list"></div>
@@ -124,7 +131,7 @@
     <div class="container footer-inner">
       <div>
         <div class="labs"><img src="assets/images/pic%205.png" alt="BigSteve Labs logo" /> BigSteve Labs — MonkeyCode Reliability Lab</div>
-        <div class="tagline">All data is SAMPLE DATA except where explicitly marked VERIFIED.</div>
+        <div class="tagline">Showing VERIFIED real testing; demo records available for layout and testing.</div>
       </div>
       <div class="links">
         <a href="method.html">Testing Method</a>

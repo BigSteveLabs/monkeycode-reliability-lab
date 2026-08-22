@@ -43,6 +43,10 @@ dashboard (`assets/js/dashboard.js`) renders records automatically, including th
 platform/feature/result filters and stats. Dashboard "verified result" highlight
 copy is in `dashboard.html`.
 
+The dashboard shows VERIFIED real records by default and hides SAMPLE records behind
+a "Show Sample Data" control. Sample records stay in the data files and are only
+displayed when that control is enabled. VERIFIED records always sort first.
+
 ```
 {
   id: "T-0015",

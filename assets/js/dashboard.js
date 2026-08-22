@@ -2,13 +2,16 @@
   var records = (window.BSL_DATA && window.BSL_DATA.records) || [];
   var BSL = window.BSL;
 
+  var includeSamples = false;
+
   function uniqueSorted(arr) {
     return Array.from(new Set(arr)).filter(Boolean).sort(function (a, b) {
       return a.localeCompare(b);
     });
   }
 
-  function populateSelect(sel, options) {
+  function populateSelect(sel, allLabel, options) {
+    sel.innerHTML = '<option value="all">' + BSL.escapeHtml(allLabel) + "</option>";
     options.forEach(function (opt) {
       var el = document.createElement("option");
       el.value = opt;
@@ -21,12 +24,30 @@
   var fFeature = BSL.qs("#f-feature");
   var fStatus = BSL.qs("#f-status");
   var fSearch = BSL.qs("#f-search");
+  var fSamples = BSL.qs("#f-samples");
   var fReset = BSL.qs("#f-reset");
   var recordList = BSL.qs("#record-list");
   var resultCount = BSL.qs("#result-count");
+  var sampleNote = BSL.qs("#sample-note");
 
-  populateSelect(fPlatform, uniqueSorted(records.map(function (r) { return r.platform; })));
-  populateSelect(fFeature, uniqueSorted(records.map(function (r) { return r.feature; })));
+  function pool() {
+    return records.filter(function (r) {
+      return includeSamples || r.dataType !== "SAMPLE";
+    });
+  }
+
+  function refreshSelects() {
+    var curP = fPlatform.value;
+    var curF = fFeature.value;
+    var platforms = uniqueSorted(pool().map(function (r) { return r.platform; }));
+    var features = uniqueSorted(pool().map(function (r) { return r.feature; }));
+    populateSelect(fPlatform, "All platforms", platforms);
+    populateSelect(fFeature, "All features", features);
+    if (platforms.indexOf(curP) === -1) fPlatform.value = "all";
+    if (features.indexOf(curF) === -1) fFeature.value = "all";
+  }
+
+  refreshSelects();
 
   function currentFilters() {
     return {
@@ -51,7 +72,16 @@
     return true;
   }
 
-  function renderStats(filtered, all) {
+  function sortRecords(list) {
+    return list.sort(function (a, b) {
+      var av = a.dataType === "REAL" ? 0 : 1;
+      var bv = b.dataType === "REAL" ? 0 : 1;
+      if (av !== bv) return av - bv;
+      return a.id.localeCompare(b.id);
+    });
+  }
+
+  function renderStats(filtered, visiblePool) {
     var pass = 0, fail = 0, blocked = 0;
     filtered.forEach(function (r) {
       if (r.status === "PASS") pass++;
@@ -62,7 +92,7 @@
     BSL.qs("#stat-pass").textContent = pass;
     BSL.qs("#stat-fail").textContent = fail;
     BSL.qs("#stat-blocked").textContent = blocked;
-    BSL.qs("#stat-features").textContent = uniqueSorted(all.map(function (r) { return r.feature; })).length;
+    BSL.qs("#stat-features").textContent = uniqueSorted(visiblePool.map(function (r) { return r.feature; })).length;
   }
 
   function evidenceHtml(rec) {
@@ -126,13 +156,19 @@
 
   function render() {
     var f = currentFilters();
-    var filtered = records.filter(function (r) { return matches(r, f); });
-    renderStats(filtered, records);
+    var visiblePool = pool();
+    var filtered = sortRecords(visiblePool.filter(function (r) { return matches(r, f); }));
+    renderStats(filtered, visiblePool);
     resultCount.textContent = filtered.length + " record" + (filtered.length === 1 ? "" : "s");
+    sampleNote.textContent = includeSamples
+      ? "Sample/demo records included."
+      : 'Showing VERIFIED real results only. Enable "Show Sample Data" to include demo records.';
     if (filtered.length === 0) {
+      var hint = includeSamples
+        ? "<p>Try widening the platform, feature, or result filters, or clear the search box.</p>"
+        : '<p>No VERIFIED real results match the current filters. Enable "Show Sample Data" to include demo records.</p>';
       recordList.innerHTML =
-        '<div class="empty"><h3>No records match</h3>' +
-        "<p>Try widening the platform, feature, or result filters, or clear the search box.</p>" +
+        '<div class="empty"><h3>No records match</h3>' + hint +
         '<button class="btn btn-ghost" id="empty-reset" type="button">Reset filters</button></div>';
       var er = BSL.qs("#empty-reset");
       if (er) er.addEventListener("click", resetFilters);
@@ -152,6 +188,11 @@
   [fPlatform, fFeature, fStatus].forEach(function (el) { el.addEventListener("change", render); });
   fSearch.addEventListener("input", render);
   fReset.addEventListener("click", resetFilters);
+  fSamples.addEventListener("change", function () {
+    includeSamples = fSamples.checked;
+    refreshSelects();
+    render();
+  });
 
   render();
 })();

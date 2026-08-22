@@ -1,5 +1,5 @@
 (function () {
-  var SAMPLE_BANNER = "All records on this page are SAMPLE DATA except where explicitly marked VERIFIED. One real, verified result exists: the prototype build that produced this site. Everything else exists to demonstrate the dashboard design and schema.";
+  var SAMPLE_BANNER = "Demo/sample records are kept in the data files for layout and testing purposes. The default dashboard view shows only VERIFIED real results.";
 
   function qs(sel, root) { return (root || document).querySelector(sel); }
   function qsa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -57,7 +57,7 @@
     if (banner && !banner.dataset.injected) {
       banner.dataset.injected = "1";
       banner.innerHTML =
-        '<div class="banner"><span><strong>SAMPLE DATA.</strong> ' + SAMPLE_BANNER + "</span></div>";
+        '<div class="banner"><span><strong>DEMO RECORDS.</strong> ' + SAMPLE_BANNER + "</span></div>";
     }
   }
 
