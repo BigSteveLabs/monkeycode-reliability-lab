@@ -87,13 +87,18 @@
 
   function recordCard(rec) {
     var badges = BSL.statusBadge(rec.status);
-    if (rec.dataType === "SAMPLE") badges += " " + BSL.sampleBadge();
+    var isReal = rec.dataType === "REAL";
+    if (isReal) badges = BSL.realBadge() + " " + badges;
+    else if (rec.dataType === "SAMPLE") badges += " " + BSL.sampleBadge();
     var quota = rec.quotaBefore === null || rec.quotaBefore === undefined
       ? '<span class="v muted">Not recorded</span>'
-      : '<span class="v mono">' + rec.quotaBefore + " &rarr; " + rec.quotaAfter + "</span>";
+      : '<span class="v mono">' + BSL.escapeHtml(rec.quotaBefore) + " &rarr; " + BSL.escapeHtml(rec.quotaAfter) + "</span>";
+    if (rec.quotaTokensUsed) {
+      quota += '<div style="margin-top:4px;"><span class="v muted">Tokens used: ' + BSL.escapeHtml(rec.quotaTokensUsed) + "</span></div>";
+    }
 
     return (
-      '<article class="record">' +
+      '<article class="record' + (isReal ? " record-real" : "") + '">' +
         '<div class="record-head">' +
           '<div class="record-title">' +
             '<span class="id">' + BSL.escapeHtml(rec.id) + "</span>" +
@@ -110,7 +115,7 @@
         '<div class="record-fields">' +
           BSL.fieldHtml("Expected result", rec.expectedResult) +
           BSL.fieldHtml("Actual result", rec.actualResult) +
-          '<div class="field"><div class="k">Quota</div>' + quota + "</div>" +
+          '<div class="field"><div class="k">Quota before / after</div>' + quota + "</div>" +
           issueHtml(rec) +
           evidenceHtml(rec) +
         "</div>" +

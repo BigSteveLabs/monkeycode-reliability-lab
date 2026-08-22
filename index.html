@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BigSteve Labs — MonkeyCode Reliability Lab</title>
   <meta name="description" content="Independent real-world testing and reliability research for MonkeyCode by BigSteve Labs." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f5b23d'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23241a05'>BS</text></svg>" />
+  <link rel="icon" href="assets/images/pic%205.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="data/test-results.js"></script>
   <script src="assets/js/main.js"></script>
@@ -15,8 +15,11 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">BS</span>
-        <span>BigSteve Labs <span class="brand-sub">/ Reliability Lab</span></span>
+        <img class="brand-logo" src="assets/images/pic%205.png" alt="BigSteve Labs logo" />
+        <span class="brand-name">
+          <span class="l1">BigSteve <em>Labs</em></span>
+          <span class="l2">Reliability Lab</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
       <nav class="nav">
@@ -32,19 +35,30 @@
     </div>
   </header>
 
+  <section class="banner-strip">
+    <img src="assets/images/pic%206.jpg" alt="BigSteve Labs banner" />
+  </section>
+
   <section class="hero">
-    <div class="container">
-      <span class="eyebrow">Independent reliability research</span>
-      <h1>How well does MonkeyCode really <span class="hl">hold up</span> in the field?</h1>
-      <p class="lede">
-        BigSteve Labs runs hands-on, real-world tests across the MonkeyCode ecosystem —
-        Web, MonkeyWork Desktop, and mobile — and publishes the results here.
-        Every claim is backed by a test record, an evidence trail, and a link back to GitHub.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="dashboard.html">View test results</a>
-        <a class="btn btn-ghost" href="method.html">How we test</a>
+    <div class="container hero-split">
+      <div>
+        <span class="eyebrow"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Independent reliability research</span>
+        <h1>How well does MonkeyCode really <span class="hl">hold up</span> in the <span class="hl2">field?</span></h1>
+        <p class="lede">
+          BigSteve Labs runs hands-on, real-world tests across the MonkeyCode ecosystem —
+          Web, MonkeyWork Desktop, and mobile — and publishes the results here.
+          Every claim is backed by a test record, an evidence trail, and a link back to GitHub.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="dashboard.html">View test results</a>
+          <a class="btn btn-orange" href="method.html">How we test</a>
+          <a class="btn btn-ghost" href="findings.html">Verified result</a>
+        </div>
       </div>
+      <figure class="hero-visual">
+        <img src="assets/images/pic%202.png" alt="MonkeyCode Reliability Lab hero artwork" />
+        <figcaption>MonkeyCode Reliability Lab</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -57,23 +71,23 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">Coverage map</p>
-        <h2 class="section-title">What the lab covers</h2>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Coverage map</p>
+        <h2 class="section-title">What the lab <span class="accent">covers</span></h2>
         <p class="section-desc">
           A reliability surface spanning the full MonkeyCode experience, from sign-in to
           self-hosted deployment.
         </p>
       </div>
       <ul class="feature-list">
-        <li><span class="feat">Authentication</span><span class="cov">OAuth sign-in, API keys, session persistence</span></li>
-        <li><span class="feat">Task Lifecycle</span><span class="cov">Create, queue, run, cancel, complete, retry</span></li>
-        <li><span class="feat">Browser Control</span><span class="cov">Navigation, DOM interaction, page-state reads</span></li>
-        <li><span class="feat">Skills</span><span class="cov">Registration, invocation, routing</span></li>
-        <li><span class="feat">MCP</span><span class="cov">Server connection, tool discovery, tool calls</span></li>
-        <li><span class="feat">Custom Models</span><span class="cov">Endpoint configuration, provider switching</span></li>
-        <li><span class="feat">Quotas</span><span class="cov">Consumption tracking, billing deltas</span></li>
-        <li><span class="feat">Git Integration</span><span class="cov">Repo connect, commit, push, PR creation</span></li>
-        <li><span class="feat">Self-Hosted Deployment</span><span class="cov">Private and on-prem installs</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Authentication</span><span class="cov">OAuth sign-in, API keys, session persistence</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Task Lifecycle</span><span class="cov">Create, queue, run, cancel, complete, retry</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Browser Control</span><span class="cov">Navigation, DOM interaction, page-state reads</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Skills</span><span class="cov">Registration, invocation, routing</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>MCP</span><span class="cov">Server connection, tool discovery, tool calls</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Custom Models</span><span class="cov">Endpoint configuration, provider switching</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Quotas</span><span class="cov">Consumption tracking, billing deltas</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Git Integration</span><span class="cov">Repo connect, commit, push, PR creation</span></li>
+        <li><span class="feat"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>Self-Hosted Deployment</span><span class="cov">Private and on-prem installs</span></li>
       </ul>
     </div>
   </section>
@@ -81,22 +95,22 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">Platforms</p>
-        <h2 class="section-title">Tested across the surface</h2>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Platforms</p>
+        <h2 class="section-title">Tested across the <span class="accent">surface</span></h2>
       </div>
       <div class="grid grid-3">
         <a class="card card-link" href="dashboard.html">
-          <div class="card-icon">Web</div>
+          <div class="card-icon"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg></div>
           <h3>MonkeyCode Web</h3>
-          <p>The browser-based product surface. All scripted, task-lifecycle, and quota tests target this platform first.</p>
+          <p>The browser-based product surface. All scripted, task-lifecycle, and quota tests target this platform first. Includes the lab's first verified real result.</p>
         </a>
         <a class="card card-link" href="dashboard.html">
-          <div class="card-icon">Work</div>
+          <div class="card-icon"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg></div>
           <h3>MonkeyWork Desktop</h3>
           <p>The desktop client. Coverage currently blocked pending a real test device and signed build.</p>
         </a>
         <a class="card card-link" href="dashboard.html">
-          <div class="card-icon">Mob</div>
+          <div class="card-icon"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg></div>
           <h3>Mobile</h3>
           <p>Responsive and mobile behavior. Coverage currently blocked pending a real mobile test device.</p>
         </a>
@@ -104,11 +118,13 @@
     </div>
   </section>
 
-  <section class="section section-alt">
+  <div class="divider"></div>
+
+  <section class="section">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">Lab sections</p>
-        <h2 class="section-title">Explore the lab</h2>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Lab sections</p>
+        <h2 class="section-title">Explore the <span class="accent">lab</span></h2>
       </div>
       <div class="grid grid-2">
         <a class="card card-link" href="dashboard.html">
@@ -145,11 +161,40 @@
     </div>
   </section>
 
+  <div class="divider"></div>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> About BigSteve</p>
+        <h2 class="section-title">Who runs the <span class="accent">lab</span></h2>
+      </div>
+      <div class="profile-card">
+        <img class="profile-avatar" src="assets/images/pic%207.jpg" alt="BigSteve portrait" />
+        <div>
+          <h3>BigSteve</h3>
+          <div class="role">Founder, BigSteve Labs</div>
+          <p>
+            BigSteve Labs is an independent reliability research outfit. We buy our own
+            test accounts, run our own hardware, and publish results whether they flatter
+            or not. Everything here is documented with repro steps, quota snapshots, and
+            evidence — and clearly labeled until it has been truly verified.
+          </p>
+          <div class="tags">
+            <span class="chip">MonkeyCode reliability</span>
+            <span class="chip">Real-world testing</span>
+            <span class="chip">Open evidence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">How findings surface</p>
-        <h2 class="section-title">From observation to issue</h2>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> How findings surface</p>
+        <h2 class="section-title">From observation to <span class="accent">issue</span></h2>
       </div>
       <ol class="timeline">
         <li><b>Observe</b> &rarr; run a test and log the outcome</li>
@@ -165,9 +210,9 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="labs">BigSteve Labs — MonkeyCode Reliability Lab</div>
+        <div class="labs"><img src="assets/images/pic%205.png" alt="BigSteve Labs logo" /> BigSteve Labs — MonkeyCode Reliability Lab</div>
         <div class="tagline">Independent real-world testing and reliability research.</div>
-        <div class="tagline dim">All data is SAMPLE DATA until real test runs begin.</div>
+        <div class="tagline dim">All data is SAMPLE DATA except where explicitly marked VERIFIED.</div>
       </div>
       <div class="links">
         <a href="dashboard.html">Test Dashboard</a>

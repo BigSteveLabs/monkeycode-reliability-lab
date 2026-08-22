@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evidence — BigSteve Labs</title>
   <meta name="description" content="Evidence archive and GitHub links for BigSteve Labs testing." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f5b23d'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23241a05'>BS</text></svg>" />
+  <link rel="icon" href="assets/images/pic%205.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/main.js"></script>
 </head>
@@ -14,8 +14,11 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">BS</span>
-        <span>BigSteve Labs <span class="brand-sub">/ Reliability Lab</span></span>
+        <img class="brand-logo" src="assets/images/pic%205.png" alt="BigSteve Labs logo" />
+        <span class="brand-name">
+          <span class="l1">BigSteve <em>Labs</em></span>
+          <span class="l2">Reliability Lab</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
       <nav class="nav">
@@ -39,6 +42,7 @@
         The raw backing for every record: screenshots, session logs, and GitHub issues.
         Nothing gets published on the dashboard without a traceable evidence link.
       </p>
+      <div class="page-banner"><img src="assets/images/pic1.png" alt="MonkeyCode Reliability Lab banner" /></div>
       <div style="margin-top: 18px;"><div data-sample-banner></div></div>
     </div>
   </section>
@@ -46,28 +50,35 @@
   <section class="section" style="padding-top: 36px;">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">GitHub</p>
-        <h2 class="section-title">Issue tracker</h2>
-        <p class="section-desc">
-          Confirmed findings are filed upstream so MonkeyCode can act on them. Issues are linked
-          from their dashboard records and bug cards.
-        </p>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Verified artifact</p>
+        <h2 class="section-title">First <span class="accent">verified</span> evidence</h2>
+        <p class="section-desc">The one real, verified result in the lab: the prototype build commit that produced this site.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Reported issues</h4>
-          <p>Links to filed GitHub issues will appear here as reproducible bugs are confirmed.</p>
-        </div>
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Reproducibility notes</h4>
-          <p>Full repro scripts and environment details per confirmed issue.</p>
-        </div>
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Resolution tracking</h4>
-          <p>Status of each report: open, fixed, verified, or wont-fix with rationale.</p>
+
+      <div class="evidence-group">
+        <div class="eg-head"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Git evidence — verified</div>
+        <div class="eg-body">
+          <div class="evidence-row">
+            <div>
+              <div class="ev-name">Prototype build push</div>
+              <div class="ev-meta">22 files, main branch</div>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://github.com/BigSteveLabs/monkeycode-reliability-lab/commit/b34874b95930ad801ffe116d23cddd2f213e8d57" target="_blank" rel="noopener">View commit</a>
+          </div>
+          <div class="evidence-row">
+            <div>
+              <div class="ev-name">Quota snapshot</div>
+              <div class="ev-meta">Daily quota displayed 10.0M, tokens used 4.3M, remaining 5.6M</div>
+            </div>
+            <span class="badge badge-real">VERIFIED</span>
+          </div>
+          <div class="evidence-row">
+            <div>
+              <div class="ev-name">Verification pass</div>
+              <div class="ev-meta">One practical verification pass completed; gallery publication not performed</div>
+            </div>
+            <span class="badge badge-pass">PASS</span>
+          </div>
         </div>
       </div>
     </div>
@@ -76,27 +87,58 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <p class="section-kicker">Media</p>
-        <h2 class="section-title">Screenshots and logs</h2>
-        <p class="section-desc">
-          An artifact store for screenshots, session recordings, and logs referenced by test records.
-        </p>
+        <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Organized archive</p>
+        <h2 class="section-title">Evidence <span class="accent">groups</span></h2>
+        <p class="section-desc">Future screenshots, logs, and issue links will be filed into these groups, keyed by test record ID.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Artifact store</h4>
-          <p>Uploaded screenshots and logs will be filed here, keyed by test record ID.</p>
+      <div class="grid grid-2">
+        <div class="evidence-group">
+          <div class="eg-head"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Screenshots</div>
+          <div class="eg-body">
+            <div class="evidence-row"><span class="ev-name">Screenshot uploads</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+            <div class="evidence-row"><span class="ev-name">Keyed by test record ID</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+          </div>
         </div>
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Quota snapshots</h4>
-          <p>Before/after quota captures that substantiate every consumption claim.</p>
+        <div class="evidence-group">
+          <div class="eg-head"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> GitHub issues</div>
+          <div class="eg-body">
+            <div class="evidence-row"><span class="ev-name">Reported issues</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+            <div class="evidence-row"><span class="ev-name">Resolution tracking</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+          </div>
         </div>
-        <div class="ph-tile">
-          <span class="badge badge-sample ph-badge">PLACEHOLDER</span>
-          <h4>Session recordings</h4>
-          <p>Video or replayable session traces for the trickiest reproductions.</p>
+        <div class="evidence-group">
+          <div class="eg-head"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Quota snapshots</div>
+          <div class="eg-body">
+            <div class="evidence-row"><span class="ev-name">Before/after captures</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+            <div class="evidence-row"><span class="ev-name">Verified quota row available</span><span class="badge badge-real">VERIFIED</span></div>
+          </div>
+        </div>
+        <div class="evidence-group">
+          <div class="eg-head"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Logs &amp; recordings</div>
+          <div class="eg-body">
+            <div class="evidence-row"><span class="ev-name">Session logs</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+            <div class="evidence-row"><span class="ev-name">Replayable recordings</span><span class="badge badge-sample">PLACEHOLDER</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="profile-card">
+        <img class="profile-avatar" src="assets/images/pic%207.jpg" alt="BigSteve portrait" />
+        <div>
+          <h3>BigSteve</h3>
+          <div class="role">Source, BigSteve Labs</div>
+          <p>
+            All evidence is collected and published by BigSteve Labs. If a claim has no
+            screenshot, log, or issue link, it does not make it onto the dashboard.
+          </p>
+          <div class="tags">
+            <span class="chip">No evidence, no finding</span>
+            <span class="chip">Open archive</span>
+          </div>
         </div>
       </div>
     </div>
@@ -105,7 +147,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="labs">BigSteve Labs — MonkeyCode Reliability Lab</div>
+        <div class="labs"><img src="assets/images/pic%205.png" alt="BigSteve Labs logo" /> BigSteve Labs — MonkeyCode Reliability Lab</div>
         <div class="tagline">No evidence, no finding.</div>
       </div>
       <div class="links">

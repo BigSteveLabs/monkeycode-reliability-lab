@@ -1,10 +1,10 @@
 window.BSL_DATA = {
   meta: {
     generator: "BigSteve Labs Reliability Lab",
-    version: "0.1.0",
-    dataType: "SAMPLE",
-    disclaimer: "All records in this dataset are SAMPLE DATA for design purposes only. No real testing has been performed. Records exist to demonstrate the schema and dashboard behavior, not to assert real findings.",
-    updated: "2026-08-20"
+    version: "0.2.0",
+    dataType: "SAMPLE + 1 VERIFIED",
+    disclaimer: "All records in this dataset are SAMPLE DATA except the single record marked dataType REAL (T-0014), which documents the lab's first verified real result: the prototype build that produced this site. Sample records exist to demonstrate the schema and dashboard behavior, not to assert real findings.",
+    updated: "2026-08-22"
   },
   records: [
     {
@@ -227,6 +227,26 @@ window.BSL_DATA = {
       evidence: [],
       githubIssue: null,
       notes: "Sample record. Deployment target not provisioned."
+    },
+    {
+      id: "T-0014",
+      dataType: "REAL",
+      platform: "MonkeyCode Web",
+      clientVersion: "prototype build (site redesign v0.2.0)",
+      testDate: "2026-08-22",
+      accountMethod: "Dedicated test account (OAuth / Google sign-in)",
+      feature: "Task Lifecycle / Git Integration / Quotas",
+      expectedResult: "An autonomous build task completes on MonkeyCode Web with Git integration, consuming daily quota within the displayed allowance",
+      actualResult: "Prototype built successfully; one practical verification pass completed; 22 files pushed to GitHub",
+      status: "PASS",
+      quotaBefore: "10.0M",
+      quotaAfter: "5.6M",
+      quotaTokensUsed: "4.3M",
+      evidence: [
+        { label: "GitHub commit b34874b", url: "https://github.com/BigSteveLabs/monkeycode-reliability-lab/commit/b34874b95930ad801ffe116d23cddd2f213e8d57" }
+      ],
+      githubIssue: null,
+      notes: "VERIFIED real result. Daily quota displayed 10.0M, tokens used displayed 4.3M, remaining quota observed 5.6M. Prototype built successfully, one practical verification pass completed, 22 files pushed to GitHub at commit b34874b95930ad801ffe116d23cddd2f213e8d57. Gallery publication not performed. Blocker: none."
     }
   ]
 };

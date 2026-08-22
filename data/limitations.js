@@ -25,10 +25,10 @@ window.BSL_LIMITS = {
     },
     {
       id: "LIM-004",
-      title: "All data is currently SAMPLE DATA",
-      description: "No test run has been performed; every record is a labeled placeholder.",
-      impact: "Dashboard reflects design intent, not measured reliability",
-      mitigation: "Execute the first real scripted pass"
+      title: "Only one real verified record so far",
+      description: "The lab has exactly one real, verified result (the prototype build, T-0014). Every other record remains labeled SAMPLE DATA.",
+      impact: "Dashboard reflects one measured data point, not broad reliability",
+      mitigation: "Run additional real scripted passes across more features"
     },
     {
       id: "LIM-005",

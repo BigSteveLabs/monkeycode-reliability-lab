@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reproducible Bugs — BigSteve Labs</title>
   <meta name="description" content="Reproducible bugs found in MonkeyCode by BigSteve Labs." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f5b23d'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23241a05'>BS</text></svg>" />
+  <link rel="icon" href="assets/images/pic%205.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="data/bugs.js"></script>
   <script src="assets/js/main.js"></script>
@@ -15,8 +15,11 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">BS</span>
-        <span>BigSteve Labs <span class="brand-sub">/ Reliability Lab</span></span>
+        <img class="brand-logo" src="assets/images/pic%205.png" alt="BigSteve Labs logo" />
+        <span class="brand-name">
+          <span class="l1">BigSteve <em>Labs</em></span>
+          <span class="l2">Reliability Lab</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
       <nav class="nav">
@@ -46,6 +49,22 @@
 
   <section class="section" style="padding-top: 36px;">
     <div class="container">
+      <div class="media-pair" style="margin-bottom: 28px;">
+        <figure class="feature-media">
+          <img src="assets/images/pic%203.png" alt="MonkeyCode wide feature artwork" />
+        </figure>
+        <div>
+          <div class="section-head" style="margin-bottom: 12px;">
+            <p class="section-kicker"><svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg> Bug tracking</p>
+            <h2 class="section-title" style="margin-bottom: 8px;">Reproduced, then <span class="accent">reported</span></h2>
+          </div>
+          <p class="muted" style="margin: 0;">
+            Every card below is scannable by design: what broke, how to trigger it,
+            what was expected, what actually happened, and where it was filed upstream.
+            Repro steps stay front and center so anyone can re-run the test.
+          </p>
+        </div>
+      </div>
       <div id="bug-list"></div>
     </div>
   </section>
@@ -53,7 +72,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="labs">BigSteve Labs — MonkeyCode Reliability Lab</div>
+        <div class="labs"><img src="assets/images/pic%205.png" alt="BigSteve Labs logo" /> BigSteve Labs — MonkeyCode Reliability Lab</div>
         <div class="tagline">Reproducible means reproduced, at least twice.</div>
       </div>
       <div class="links">

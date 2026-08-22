@@ -1,5 +1,5 @@
 (function () {
-  var SAMPLE_BANNER = "All data on this page is SAMPLE DATA. No real MonkeyCode testing has been performed yet; records exist to demonstrate the dashboard design and schema.";
+  var SAMPLE_BANNER = "All records on this page are SAMPLE DATA except where explicitly marked VERIFIED. One real, verified result exists: the prototype build that produced this site. Everything else exists to demonstrate the dashboard design and schema.";
 
   function qs(sel, root) { return (root || document).querySelector(sel); }
   function qsa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -24,6 +24,14 @@
 
   function sampleBadge() {
     return '<span class="badge badge-sample">SAMPLE</span>';
+  }
+
+  function realBadge() {
+    return '<span class="badge badge-real">VERIFIED</span>';
+  }
+
+  function boltIcon() {
+    return '<svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h5L9.5 22 19 9.5h-5L13 2Z"/></svg>';
   }
 
   function chips(arr) {
@@ -64,6 +72,8 @@
     escapeHtml: escapeHtml,
     statusBadge: statusBadge,
     sampleBadge: sampleBadge,
+    realBadge: realBadge,
+    boltIcon: boltIcon,
     chips: chips,
     fieldHtml: fieldHtml,
     initShell: initShell
