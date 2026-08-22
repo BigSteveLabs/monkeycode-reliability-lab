@@ -1,5 +1,5 @@
 (function () {
-  var SAMPLE_BANNER = "Demo/sample records are kept in the data files for layout and testing purposes. The default dashboard view shows only VERIFIED real results.";
+  var SAMPLE_BANNER = "VERIFIED TESTING. Real results are shown where available. Sample/demo records are retained only for layout and testing purposes.";
 
   function qs(sel, root) { return (root || document).querySelector(sel); }
   function qsa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -57,7 +57,7 @@
     if (banner && !banner.dataset.injected) {
       banner.dataset.injected = "1";
       banner.innerHTML =
-        '<div class="banner"><span><strong>DEMO RECORDS.</strong> ' + SAMPLE_BANNER + "</span></div>";
+        '<div class="banner"><span><strong>VERIFIED TESTING.</strong> Real results are shown where available. Sample/demo records are retained only for layout and testing purposes.</span></div>';
     }
   }
 
@@ -85,3 +85,4 @@
     initShell();
   }
 })();
+
